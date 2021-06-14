@@ -1,0 +1,16 @@
+<h2 >My Heroes</h2>
+
+<div style="text-align:center;vertical-align:middle;">
+  <label for="new-hero">Hero name: </label>
+  <input type="text" id="new-hero" #heroName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  
+  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add hero
+  </button>
+  <!-- <button (click)="addhero()">add</button> -->
+  <br>
+  <label>Top Hero:<input  type="radio" name="heroRadio"  (click)="getRadio();" /></label> 
+  <label>Other Hero:<input  type="radio" name="heroRadio"  (click)="getRadio1();" checked="checked"/></label>
+</div>
